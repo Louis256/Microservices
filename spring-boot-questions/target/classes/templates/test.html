@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta content="text/html;charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <link th:href="@{/js/jquery-1.11.3.min.js}" rel="stylesheet"/>
+</head>
+<body>  
+    <h2>Test</h2>  
+    <p th:text="${question.questionId}"></p>
+    <p th:text="${question.description}"></p>
+    <p th:text="${question.a}"></p>
+    <p th:text="${question.b}"></p>
+    <p th:text="${question.c}"></p>
+    <p th:text="${question.d}"></p>
+    <span th:text="${question.d}"></span>
+    <p th:text="${question.d}"></p>
+    
+    
+    
+	<h1>JavaScript is ______ Language.</h1><br />
+	<form >
+	<input type="radio" name="choice" value="Scripting"/> <p th:text="${question.a}"></p> 
+	<input type="radio" name="choice" value="Programming"/> <p th:text="${question.b}"></p>
+	<input type="radio" name="choice" value="Application"/> <p th:text="${question.c}"></p>
+	<input type="radio" name="choice" value="None of These"/> <p th:text="${question.d}"></p>
+	</form>
+	<div>
+      <button type="submit">Submit</button>
+    </div>
+</body>	
+</html>
+<!--  
+    <img src="images/b.jpg" />
+    -->

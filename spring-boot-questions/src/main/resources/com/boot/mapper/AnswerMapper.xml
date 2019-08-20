@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>    
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"    
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">  
+<mapper namespace="com.boot.dao.AnswerDao">  
+
+    <resultMap id="AnswerResultMap" type="com.boot.domain.Answer">  
+        <id column="answer_id" property="answerId" jdbcType="INTEGER" />  
+        <result column="input_answer" property="inputAnswer" jdbcType="CHAR" />  
+        <result column="correct_answer" property="correctAnswer" jdbcType="CHAR" /> 
+    </resultMap>  
+ 
+    <!--  
+    <select id="selectQuestionById" parameterType="int" resultMap="QuestionResultMap">  
+        SELECT * FROM test WHERE test_id = #{questionId}  
+    </select>  
+    
+    
+     
+    <select id="selectImageById" parameterType="int" resultMap="QuestionResultMap">  
+        SELECT image FROM test WHERE test_id = #{questionId}  
+    </select> 
+    --> 
+
+ 	<update id="insertAnswerById" parameterType="int" >
+ 		update answer set
+    	input_answer = #{inputAnswer}, 
+  		where answer_id = #{questionId}
+ 	</update>   
+    
+</mapper> 
