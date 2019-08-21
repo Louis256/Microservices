@@ -23,4 +23,7 @@
         SELECT image FROM test WHERE test_id = #{questionId}  
     </select> 
     
+    <delete id="deleteQuestionById" >
+  		delete from test where id = #{questionId}
+	</delete>
 </mapper> 

@@ -1,13 +1,15 @@
 package com.boot.domain;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Lob;
-import javax.persistence.Table;
-import java.sql.Blob;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Question {
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer questionId; 
     private String description; 
     private String a;
@@ -16,7 +18,8 @@ public class Question {
     private String d;
     
     
-    public Integer getQuestionId() {  
+
+	public Integer getQuestionId() {  
         return questionId;  
     }  
   
