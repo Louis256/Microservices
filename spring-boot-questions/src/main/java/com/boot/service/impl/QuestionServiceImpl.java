@@ -29,17 +29,23 @@ public class QuestionServiceImpl implements QuestionService{
     }
     
     @Override
-	public void createPost(Question question) {
-		
+	public void createQuestion(Question question) {		
 		this.questionDao.save(question);
 	}
     
     @Override
-	public void updatePost(Question question) {
+	public void updateQuestion(Question question) {
 		this.questionDao.update(question);
 	}
 	
- 
+    @Override
+	public Map<String, Object> findQuestion(Integer questionId) {
+		Map<String, Object> attributes = new HashMap<>();
+		Question question = this.questionDao.selectQuestionById(questionId);
+		attributes.put("question", question);
+		return attributes;
+	}
+    
 	@Override
 	public Map<String, Object> findAllQuestions() {
 		Map<String, Object> attributes = new HashMap<>();

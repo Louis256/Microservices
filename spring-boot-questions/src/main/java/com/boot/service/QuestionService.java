@@ -10,13 +10,11 @@ public interface QuestionService {
 	Question selectQuestionById(Integer questionId);
 	void deleteQuestionById(Integer questionId);
 	
-	void createPost(Question question);
+	void createQuestion(Question question);
 	
+	void updateQuestion(Question question);
 	
-	
-	void updatePost(Question question);
-	
-	
+	Map<String, Object> findQuestion(Integer questionId);
 	
 	Map<String, Object> findAllQuestions();
 

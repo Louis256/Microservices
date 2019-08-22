@@ -106,3 +106,6 @@
 2019-08-21 16:43:39,687 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
 2019-08-21 16:43:39,711 [main] INFO  org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8080 (http)
 2019-08-21 16:43:39,717 [main] INFO  com.boot.Application - Started Application in 9.075 seconds (JVM running for 9.971)
+2019-08-21 16:47:30,441 [Thread-3] INFO  o.s.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1187c9e8: startup date [Wed Aug 21 16:43:32 EDT 2019]; root of context hierarchy
+2019-08-21 16:47:30,447 [Thread-3] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+2019-08-21 16:47:30,452 [Thread-3] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'

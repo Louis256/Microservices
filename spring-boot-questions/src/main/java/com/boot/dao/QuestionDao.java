@@ -16,7 +16,7 @@ public interface QuestionDao {
 	
 	public void update(Question question);
 	
-	public void createPost(Question question);
+	//public void createQuestion(Question question);
 	
 	public List<Question> findAll();
 	

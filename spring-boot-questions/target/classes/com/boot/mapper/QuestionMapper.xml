@@ -16,14 +16,33 @@
     <select id="selectQuestionById" parameterType="int" resultMap="QuestionResultMap">  
         SELECT * FROM test WHERE test_id = #{questionId}  
     </select>  
-    
-    
-    
+       
     <select id="selectImageById" parameterType="int" resultMap="QuestionResultMap">  
         SELECT image FROM test WHERE test_id = #{questionId}  
     </select> 
     
+    <insert id="save">
+        INSERT INTO test (description, a, b, c, d) 
+        VALUES (#{description}, #{a}, #{b}, #{c}, #{d})       
+    </insert>
+    
+    <select id="findAll" resultMap="QuestionResultMap">
+        SELECT *                     
+        FROM test 
+        ORDER BY test_id DESC
+    </select>
+    
+    <update id="update" parameterType="com.boot.domain.Question">
+        UPDATE test SET 
+	        description = #{description},
+	        a = #{a},
+	        b = #{b},
+	        c = #{c},
+	        d = #{d}
+        WHERE test_id = #{questionId}
+    </update>
+    
     <delete id="deleteQuestionById" >
-  		delete from test where id = #{questionId}
+  		delete from test where test_id = #{questionId}
 	</delete>
 </mapper> 
