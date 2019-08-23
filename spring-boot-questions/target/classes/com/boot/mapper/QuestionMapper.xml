@@ -21,6 +21,7 @@
         SELECT image FROM test WHERE test_id = #{questionId}  
     </select> 
     
+
     <insert id="save" parameterType="com.boot.domain.Question" 
     useGeneratedKeys="true" keyProperty="questionId" >
         INSERT INTO test (description, a, b, c, d) 

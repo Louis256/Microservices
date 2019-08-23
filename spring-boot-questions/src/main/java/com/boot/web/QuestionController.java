@@ -36,13 +36,7 @@ public class QuestionController {
         return "test";   
 		
     } 
-	/**
-	@GetMapping("/test/questions1111")
-	public Map<String, Object> retrieveAllQuestions() {
-		return questionService.findAllQuestions();
-	}
-	**/
-	
+
 	/*
 	 * Create a new question
 	 */
@@ -60,6 +54,7 @@ public class QuestionController {
 	public void deleteQuestion(@PathVariable("questionId") Integer questionId) {		
 		 this.questionService.deleteQuestionById(questionId);
 		//return "redirect:/test";
+
 	}
 	
 	/*
@@ -73,12 +68,11 @@ public class QuestionController {
 	}
 	
 	@PutMapping("/test/update/{id}")
+	@PutMapping("/test/{id}")
 	public ResponseEntity<Object> updateQuestion(@RequestBody Question question, 
 			@PathVariable Integer id) {
-
 		
-		question.setQuestionId(id);
-		
+		question.setQuestionId(id);		
 		questionService.updateQuestion(question);
 
 		return ResponseEntity.noContent().build();
@@ -89,7 +83,12 @@ public class QuestionController {
 		questionService.updateQuestion(question);
 		
 	}
-	
+	/**
+		questionService.createQuestion(question);
+
+		return ResponseEntity.noContent().build();
+	}**/
+
 	/*
 	 * List all questions
 	 */
