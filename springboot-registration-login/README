@@ -1,1 +1,4 @@
+Database: H2
+JDK: 1.8
 To Run: mvn clean spring-boot:run
+Open:http://localhost:8080

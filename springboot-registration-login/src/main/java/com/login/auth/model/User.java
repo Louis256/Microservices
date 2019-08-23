@@ -19,8 +19,18 @@ public class User {
 
     @ManyToMany
     private Set<Role> roles;
+    
+    private boolean admin;
 
-    public Long getId() {
+    public boolean isAdmin() {
+		return admin;
+	}
+
+	public void setAdmin(boolean admin) {
+		this.admin = admin;
+	}
+
+	public Long getId() {
         return id;
     }
 
