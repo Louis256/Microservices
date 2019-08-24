@@ -1,0 +1,11 @@
+CREATE TABLE `test` (
+  `test_id` INT(11) NOT NULL AUTO_INCREMENT,
+  `description` VARCHAR(255) NOT NULL,
+  `a` VARCHAR(45) NOT NULL,
+  `b` VARCHAR(45) NOT NULL,
+  `c` VARCHAR(45) NOT NULL,
+  `d` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`test_id`));
+
+INSERT INTO t_user (USER_ID, USER_NAME, USER_PASSWORD, USER_EMAIL) VALUES (1, 'Jon', '1234567@', 'aaa@126.com');  
+

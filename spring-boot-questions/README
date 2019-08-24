@@ -1,0 +1,17 @@
+Database: MySQL
+ide:STS
+
+To Run: 
+1.download and extract file
+2.import "spring-boot-questions" as existing Maven project
+3.open "application.yml" and change username and password for MySQL
+4.run dataSample.sql on MySQL to create table and insert data
+4.right click to run "Application.java" as java application  
+5.Open Postman
+	http://localhost:8080/test/add to add question
+	http://localhost:8080/test/delete/{questionId} to delete question by questionId
+	http://localhost:8080/test/update/{questionId} to update question by questionId
+	http://localhost:8080/test/allquestions to view all questions
+	http://localhost:8080/test/questions/{questionId} to view a question detail by questionId
+	
+	

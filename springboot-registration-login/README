@@ -1,4 +1,8 @@
 Database: H2
 JDK: 1.8
-To Run: mvn clean spring-boot:run
-Open:http://localhost:8080
+ide:STS
+To Run: 
+1.download and extract file
+2.import "springboot-registration-login" as existing Maven project
+3.right click to run "WebApplication.java" as java application  
+4.Open:http://localhost:8080 on browser

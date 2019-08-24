@@ -966,3 +966,6 @@ Error starting ApplicationContext. To display the auto-configuration report re-r
 2019-08-23 13:30:04,121 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
 2019-08-23 13:30:04,152 [main] INFO  org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8080 (http)
 2019-08-23 13:30:04,163 [main] INFO  com.boot.Application - Started Application in 8.855 seconds (JVM running for 9.574)
+2019-08-23 13:31:00,765 [Thread-3] INFO  o.s.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1187c9e8: startup date [Fri Aug 23 13:29:56 EDT 2019]; root of context hierarchy
+2019-08-23 13:31:00,770 [Thread-3] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+2019-08-23 13:31:00,774 [Thread-3] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
