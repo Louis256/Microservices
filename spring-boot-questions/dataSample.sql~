@@ -6,6 +6,19 @@ CREATE TABLE `test` (
   `c` VARCHAR(45) NOT NULL,
   `d` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`test_id`));
+  
+CREATE TABLE `database3`.`course` (
+  `course_id` BIGINT NOT NULL AUTO_INCREMENT,
+  `course_name` VARCHAR(45) NULL,
+  `course_description` VARCHAR(2000) NULL,
+  `created_by` VARCHAR(255) NULL,
+  `created_date` DATETIME NULL,
+  `modified_by` VARCHAR(255) NULL,
+  `modified_date` DATETIME NULL,
+  `subscription_fee` FLOAT NULL,
+  PRIMARY KEY (`course_id`));
+  
 
 INSERT INTO t_user (USER_ID, USER_NAME, USER_PASSWORD, USER_EMAIL) VALUES (1, 'Jon', '1234567@', 'aaa@126.com');  
 
+INSERT INTO `database3`.`course` (`course_id`, `course_name`, `course_description`, `created_by`, `created_date`, `modified_by`, `modified_date`, `subscription_fee`) VALUES ('1', 'Math', 'math', '1', '08/27/2019', '1', '08/27/2019', '30');
