@@ -8,7 +8,7 @@ import com.boot.domain.Course;
 
 @Mapper
 public interface CourseDao {
-	public void save(Course Course);
+	public void save(Course course);
 	
 	public void delete(Long courseId);
 	

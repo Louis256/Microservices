@@ -1,0 +1,55 @@
+2019-08-28 10:47:46,741 [main] INFO  com.boot.Application - Starting Application on luyin-VPCEG16FM with PID 6962 (/home/luyin/Desktop/Git/spring-boot-questions/target/classes started by luyin in /home/luyin/Desktop/Git/spring-boot-questions)
+2019-08-28 10:47:46,746 [main] INFO  com.boot.Application - No active profile set, falling back to default profiles: default
+2019-08-28 10:47:47,773 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.3.6.Final
+2019-08-28 10:47:47,790 [main] INFO  o.s.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@791d1f8b: startup date [Wed Aug 28 10:47:47 EDT 2019]; root of context hierarchy
+2019-08-28 10:47:52,098 [main] INFO  org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8080 (http)
+2019-08-28 10:47:52,122 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-08-28 10:47:52,124 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.23
+2019-08-28 10:47:52,361 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-08-28 10:47:52,362 [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4572 ms
+2019-08-28 10:47:52,653 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2019-08-28 10:47:52,662 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-08-28 10:47:52,662 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-08-28 10:47:52,663 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-08-28 10:47:52,663 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2019-08-28 10:47:53,901 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+2019-08-28 10:47:53,922 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-08-28 10:47:54,048 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.0.12.Final}
+2019-08-28 10:47:54,050 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2019-08-28 10:47:54,053 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2019-08-28 10:47:54,156 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2019-08-28 10:47:54,409 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-08-28 10:47:55,345 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-08-28 10:47:57,493 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@791d1f8b: startup date [Wed Aug 28 10:47:47 EDT 2019]; root of context hierarchy
+2019-08-28 10:47:57,821 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/course/add],methods=[POST]}" onto public void com.boot.web.CourseController.createCourse(org.springframework.ui.Model,com.boot.domain.Course)
+2019-08-28 10:47:57,824 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/courses/all],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.boot.web.CourseController.listAllCourses(org.springframework.ui.Model)
+2019-08-28 10:47:57,824 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/course/{courseId}],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.boot.web.CourseController.displayCourseDetails(org.springframework.ui.Model,java.lang.Long)
+2019-08-28 10:47:57,836 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/course/delete/{courseId}],methods=[DELETE]}" onto public void com.boot.web.CourseController.deleteCourse(java.lang.Long)
+2019-08-28 10:47:57,837 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/course/update/{courseId}],methods=[PUT]}" onto public void com.boot.web.CourseController.updateCourse(com.boot.domain.Course)
+2019-08-28 10:47:57,839 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/]}" onto java.lang.String com.boot.web.MainController.home()
+2019-08-28 10:47:57,857 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/test]}" onto public java.lang.String com.boot.web.QuestionController.getIndex(org.springframework.ui.Model)
+2019-08-28 10:47:57,858 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/test/delete/{questionId}],methods=[DELETE]}" onto public void com.boot.web.QuestionController.deleteQuestion(java.lang.Integer)
+2019-08-28 10:47:57,859 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/test/update/{questionId}],methods=[PUT]}" onto public void com.boot.web.QuestionController.updateUser(com.boot.domain.Question)
+2019-08-28 10:47:57,860 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/test/allquestions],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.boot.web.QuestionController.listAllQuestion(org.springframework.ui.Model)
+2019-08-28 10:47:57,862 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/test/questions/{questionId}],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.boot.web.QuestionController.displayQuestionDetails(org.springframework.ui.Model,java.lang.Integer)
+2019-08-28 10:47:57,863 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/test/add],methods=[POST]}" onto public void com.boot.web.QuestionController.createQuestion(org.springframework.ui.Model,com.boot.domain.Question)
+2019-08-28 10:47:57,865 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/user]}" onto public java.lang.String com.boot.web.UserController.getIndex(org.springframework.ui.Model)
+2019-08-28 10:47:57,874 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-08-28 10:47:57,875 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-08-28 10:47:57,987 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-08-28 10:47:58,000 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-08-28 10:47:58,161 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-08-28 10:47:59,675 [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2019-08-28 10:47:59,734 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-08-28 10:47:59,758 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2019-08-28 10:47:59,773 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2019-08-28 10:47:59,806 [main] INFO  org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8080 (http)
+2019-08-28 10:47:59,821 [main] INFO  com.boot.Application - Started Application in 14.556 seconds (JVM running for 15.51)
+2019-08-28 10:48:16,582 [http-nio-8080-exec-2] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-08-28 10:48:16,582 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2019-08-28 10:48:16,608 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 26 ms
+2019-08-28 17:10:34,036 [Thread-3] INFO  o.s.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@791d1f8b: startup date [Wed Aug 28 10:47:47 EDT 2019]; root of context hierarchy
+2019-08-28 17:10:34,039 [Thread-3] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+2019-08-28 17:10:34,041 [Thread-3] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'

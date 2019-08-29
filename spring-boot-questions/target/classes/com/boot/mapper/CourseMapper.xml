@@ -8,7 +8,7 @@
         <result column="course_name" property="courseName" jdbcType="CHAR" /> 
         <result column="course_description" property="courseDescription" jdbcType="CHAR" />  
         <result column="created_by" property="createdBy" jdbcType="CHAR" /> 
-        <result column="created_data" property="createdDate" jdbcType="DATE" /> 
+        <result column="created_date" property="createdDate" jdbcType="DATE" /> 
         <result column="modified_by" property="modifiedBy" jdbcType="CHAR" /> 
         <result column="modified_data" property="modifiedData" jdbcType="DATE" /> 
         <result column="subscription_fee" property="subscriptionFee" jdbcType="FLOAT" /> 

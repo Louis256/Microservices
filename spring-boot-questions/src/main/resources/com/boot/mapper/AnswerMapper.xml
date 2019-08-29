@@ -4,27 +4,45 @@
 <mapper namespace="com.boot.dao.AnswerDao">  
 
     <resultMap id="AnswerResultMap" type="com.boot.domain.Answer">  
-        <id column="answer_id" property="answerId" jdbcType="INTEGER" />  
-        <result column="input_answer" property="inputAnswer" jdbcType="CHAR" />  
-        <result column="correct_answer" property="correctAnswer" jdbcType="CHAR" /> 
+        <id column="answer_id" property="answerId" jdbcType="BIGINT" />  
+        <result column="user_id" property="userId" jdbcType="BIGINT" />  
+        <result column="course_id" property="courseId" jdbcType="BIGINT" /> 
+        <result column="answer_data" property="answerData" jdbcType="BLOB" /> 
+        <result column="created_date" property="createdDate" jdbcType="DATE" />
+        
     </resultMap>  
  
-    <!--  
-    <select id="selectQuestionById" parameterType="int" resultMap="QuestionResultMap">  
-        SELECT * FROM test WHERE test_id = #{questionId}  
-    </select>  
-    
-    
-     
-    <select id="selectImageById" parameterType="int" resultMap="QuestionResultMap">  
-        SELECT image FROM test WHERE test_id = #{questionId}  
-    </select> 
-    --> 
 
- 	<update id="insertAnswerById" parameterType="int" >
- 		update answer set
-    	input_answer = #{inputAnswer}, 
-  		where answer_id = #{questionId}
- 	</update>   
+	<insert id="save" parameterType="com.boot.domain.Answer" 
+    useGeneratedKeys="true" keyProperty="answerId" >
+        INSERT INTO answer (answer_id, user_id, course_id, answer_data, 
+        created_date) 
+        VALUES (#{answerId}, #{userId}, #{courseId}, #{answerData}, 
+        #{createdDate})       
+    </insert>
+       
+    <select id="findAll" resultMap="AnswerResultMap">
+        SELECT *                     
+        FROM answer 
+        ORDER BY answer_id DESC
+    </select>
+    
+    <select id="find" resultMap="AnswerResultMap">
+        SELECT *           
+        FROM answer
+        WHERE answer_id = #{answerId}
+    </select>
+    
+    <update id="update" parameterType="com.boot.domain.Answer">
+        UPDATE answer SET 
+	        user_id = #{userId},
+	        course_id = #{courseId},
+        	answer_data = #{answerData}, 
+        WHERE answer_id = #{answerId}
+    </update>
+    
+    <delete id="delete" parameterType="Long">
+        DELETE FROM answer WHERE answer_id = #{answerId}
+    </delete>  
     
 </mapper> 
