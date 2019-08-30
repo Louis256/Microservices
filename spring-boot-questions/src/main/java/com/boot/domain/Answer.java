@@ -1,12 +1,13 @@
 package com.boot.domain;
 
+import java.sql.Clob;
 import java.sql.Timestamp;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
-import com.mysql.jdbc.Clob;
-
+@Entity
 public class Answer {
 	@Id
 	@GeneratedValue
@@ -49,19 +50,19 @@ public class Answer {
 	public void setCreatedDate(Timestamp createdDate) {
 		this.createdDate = createdDate;
 	}
-	public Answer(Long userId, Long courseId, Clob answerData, 
-			Timestamp createdDate) {
+	@Override
+	public String toString() {
+		return "Answer [answerId=" + answerId + ", userId=" + userId + ", courseId=" + courseId + ", answerData="
+				+ answerData + ", createdDate=" + createdDate + "]";
+	}
+	public Answer(Long userId, Long courseId, Clob answerData, Timestamp createdDate) {
 		super();
 		this.userId = userId;
 		this.courseId = courseId;
 		this.answerData = answerData;
 		this.createdDate = createdDate;
 	}
-	@Override
-	public String toString() {
-		return "Answer [answerId=" + answerId + ", userId=" + userId + ", courseId=" + courseId + ", answerData="
-				+ answerData + ", createdDate=" + createdDate + "]";
-	}
+	
 	
 	
 

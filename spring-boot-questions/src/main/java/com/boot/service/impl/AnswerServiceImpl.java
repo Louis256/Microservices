@@ -11,7 +11,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.boot.dao.AnswerDao;
 import com.boot.domain.Answer;
-import com.boot.domain.Course;
 import com.boot.service.AnswerService;
 
 
