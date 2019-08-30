@@ -7,9 +7,8 @@
         <id column="answer_id" property="answerId" jdbcType="BIGINT" />  
         <result column="user_id" property="userId" jdbcType="BIGINT" />  
         <result column="course_id" property="courseId" jdbcType="BIGINT" /> 
-        <result column="answer_data" property="answerData" jdbcType="BLOB" /> 
-        <result column="created_date" property="createdDate" jdbcType="DATE" />
-        
+        <result column="answer_data" property="answerData" jdbcType="CLOB" /> 
+        <result column="created_date" property="createdDate" jdbcType="DATE" />       
     </resultMap>  
  
 

@@ -1,7 +1,6 @@
 package com.boot.service;
 
 import java.util.Map;
-
 import com.boot.domain.Answer;
 
 public interface AnswerService {

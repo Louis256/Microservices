@@ -11,28 +11,30 @@ public class Answer {
 	@Id
 	@GeneratedValue
 	private Long answerId;
-	private Integer userId;
-	private Integer courseId;
+	private Long userId;
+	private Long courseId;
 	private Clob answerData;
 	private Timestamp createdDate;
 	
-	
+	public Answer() {
+		
+	}
 	public Long getAnswerId() {
 		return answerId;
 	}
 	public void setAnswerId(Long answerId) {
 		this.answerId = answerId;
 	}
-	public Integer getUserId() {
+	public Long getUserId() {
 		return userId;
 	}
-	public void setUserId(Integer userId) {
+	public void setUserId(Long userId) {
 		this.userId = userId;
 	}
-	public Integer getCourseId() {
+	public Long getCourseId() {
 		return courseId;
 	}
-	public void setCourseId(Integer courseId) {
+	public void setCourseId(Long courseId) {
 		this.courseId = courseId;
 	}
 	public Clob getAnswerData() {
@@ -46,6 +48,19 @@ public class Answer {
 	}
 	public void setCreatedDate(Timestamp createdDate) {
 		this.createdDate = createdDate;
+	}
+	public Answer(Long userId, Long courseId, Clob answerData, 
+			Timestamp createdDate) {
+		super();
+		this.userId = userId;
+		this.courseId = courseId;
+		this.answerData = answerData;
+		this.createdDate = createdDate;
+	}
+	@Override
+	public String toString() {
+		return "Answer [answerId=" + answerId + ", userId=" + userId + ", courseId=" + courseId + ", answerData="
+				+ answerData + ", createdDate=" + createdDate + "]";
 	}
 	
 	
